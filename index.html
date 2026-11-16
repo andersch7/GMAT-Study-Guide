@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GMAT Coach — your personal study guide</title>
+  <meta name="description" content="A personal GMAT study guide: a plan built around your test date, coaching for every question type, practice, an error log and a mock-exam tracker.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f6b63'/%3E%3Cpath d='M9 17l5 5 9-11' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem('gmatCoach.v1') || '{}');
+        if (s.theme === 'light' || s.theme === 'dark') document.documentElement.setAttribute('data-theme', s.theme);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false"></button>
+    <a class="brand" href="#/today"><span class="brand-mark" aria-hidden="true"></span><span>GMAT Coach</span></a>
+    <span class="topbar-count" id="topbarCount"></span>
+  </header>
+
+  <div class="scrim" id="scrim" hidden></div>
+
+  <nav class="sidebar" id="sidebar" aria-label="Main">
+    <a class="brand brand-side" href="#/today"><span class="brand-mark" aria-hidden="true"></span><span>GMAT Coach</span></a>
+    <div id="navList"></div>
+    <div class="sidebar-foot" id="sidebarFoot"></div>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <noscript><div class="page"><h1>GMAT Coach</h1><p>This study guide needs JavaScript to build your plan and save your progress. Please enable it and reload.</p></div></noscript>
+  </main>
+
+  <nav class="tabbar" id="tabbar" aria-label="Quick navigation"></nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data/exam.js"></script>
+  <script src="data/resources.js"></script>
+  <script src="data/plans.js"></script>
+  <script src="data/lessons-quant.js"></script>
+  <script src="data/lessons-verbal.js"></script>
+  <script src="data/lessons-di.js"></script>
+  <script src="data/guides.js"></script>
+  <script src="data/questions.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/plan.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
